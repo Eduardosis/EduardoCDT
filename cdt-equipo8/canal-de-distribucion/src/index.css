@@ -1,0 +1,39 @@
+header, footer {
+  background-color: #800080; 
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+}
+  
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+header .menu-icon {
+  cursor: pointer;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+main .content {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: inline-block;
+}

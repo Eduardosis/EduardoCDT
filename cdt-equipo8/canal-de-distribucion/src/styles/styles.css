@@ -1,0 +1,213 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.logo{
+  display: flex;
+  align-items: left; /* Alinear elementos verticalmente */
+  width: 60px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: auto; /* Mantener proporción */
+  margin-right: 5px; /* Espacio entre la imagen y el texto */
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.8rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  font-weight: bold; /* Hace la fuente más gruesa */
+  font-family: 'Roboto', sans-serif; /* Cambia la fuente a Roboto */
+}
+
+header, footer {
+  background-color: #5C217D; /* Color morado */
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 10;
+}
+
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+}
+
+footer .container a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 5px; /* Añadir espacio entre el texto y el enlace */
+}
+
+footer .container a:hover {
+  text-decoration: underline;
+}
+
+header .container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+footer .container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+.main {
+  padding: 10% 20% 40%; /* Ajustar el espaciado según el tamaño del header y footer */
+  text-align: center;
+  margin-top: 2%; /* Espacio entre el header y el contenido principal */
+}
+
+.content-panel {
+  background-color: #AD55D8; /* Color morado */
+  color: #ffffff;
+  max-width: 800px; /* Ancho máximo del panel */
+  height: 300px;
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.button-container-panel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 10px; /* Espacio entre botones */
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button-container-panel button {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #5C217D; /* Texto morado */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Menú fuera de vista a la derecha */
+  width: 200px;
+  height: 100%;
+  background-color: #AD55D8;
+  color: white;
+  transition: right 0.3s;
+  padding-top: 60px; /* Para evitar superposición con el header */
+  z-index: 5;
+  text-align: center;
+  border-radius: 100px 0 0 150px; /* Bordes redondeados: arriba-izquierda, abajo-izquierda */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+  display: none;
+  z-index: 4; /* Colocar por debajo del menú pero por encima del contenido */
+}
+
+.overlay.open {
+  display: block;
+}
+
+.menu.open {
+  right: 0; /* Menú visible */
+}
+
+.main.menu-open {
+  filter: blur(2px); /* Aplicar desenfoque al contenido principal */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.menuoption{
+  border-bottom: 1px solid #ffffff;
+}
+
+.menu ul li:hover {
+  background-color: #993399; /* Color morado más claro */
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 1.5rem; /* Tamaño del icono */
+  margin-right: 2%;
+}
+
+.cierre{
+  margin-top: 180%;
+}
+
+.logo{
+  margin-left: -55%;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    width: 180px; /* Reducir el ancho del menú para pantallas más pequeñas */
+    padding-top: 110px; /* Para evitar superposición con el header */
+  }
+
+  .main {
+    padding-top: 160px; /* Ajustar el espacio entre el header y el contenido principal */
+  }
+
+  .menu-icon {
+    font-size: 1.2rem; /* Ajuste de tamaño del icono para pantallas más pequeñas */
+    margin-right: 55px;
+  }
+  
+  .content-panel {
+    background-color: #AD55D8; /* Color morado */
+    color: #ffffff;
+    max-width: 800px; /* Ancho máximo del panel */
+    height: 30%;
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px;
+    border-radius: 50px;
+  }
+
+  .header-title {
+    margin-right: 75px;
+  }
+
+}
+@media (max-width: 768px) {
+  .button-container-panel {
+    grid-template-columns: repeat(1, 1fr); /* 1 columnas para pantallas pequeñas */
+  }
+  .cierre{
+    margin-top: 100%;
+  }
+}
