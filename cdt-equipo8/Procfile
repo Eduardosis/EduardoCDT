@@ -1,1 +1,2 @@
-web: gunicorn apiTesting.wsgi
+web: gunicorn apiTesting.wsgi:application --bind 0.0.0.0:$PORT
+
