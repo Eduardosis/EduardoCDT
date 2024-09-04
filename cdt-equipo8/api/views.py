@@ -20,8 +20,12 @@ from api.models import AppUser
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.exceptions import ValidationError
 from django.contrib.auth.hashers import check_password
+from django.shortcuts import render
 
 logger = logging.getLogger(__name__)
+
+def index(request):
+    return render(request, 'index.html')
 
 class EeServiciopaqueteriaListCreate(generics.ListCreateAPIView):
     authentication_classes = (TokenAuthentication,)

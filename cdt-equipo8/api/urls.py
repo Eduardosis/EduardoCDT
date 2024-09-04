@@ -9,6 +9,7 @@ from api.views import (
 )
 
 urlpatterns = [
+    
     path('ee-serviciopaqueteria/', EeServiciopaqueteriaListCreate.as_view(), name='ee_serviciopaqueteria_list_create'),
     path('ee-serviciopaqueteria/<int:pk>/', EeServiciopaqueteriaRetrieveUpdateDestroy.as_view(), name='ee_serviciopaqueteria_detail'),
 
