@@ -9,7 +9,7 @@ applications:
         commands:
           - npm run build
     artifacts:
-      baseDirectory: /frontend/build
+      baseDirectory: cdt-equipo8
       files:
         - '**/*'
     cache:
