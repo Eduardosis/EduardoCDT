@@ -25,5 +25,6 @@ rich==13.7.1
 sqlparse==0.5.0
 tzdata==2024.1
 urllib3==2.2.2
-gunicorn
+gunicorn==20.2.0
+
 
