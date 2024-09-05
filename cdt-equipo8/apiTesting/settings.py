@@ -5,7 +5,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'frontend', 'build', 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'frontend', 'public')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Quick-start development settings - unsuitable for production
@@ -83,7 +83,7 @@ ROOT_URLCONF = 'apiTesting.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'build')],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'public')],
         'APP_DIRS': True,  
         'OPTIONS': {
             'context_processors': [
