@@ -176,7 +176,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://127.0.0.1:9000",
     "http://localhost:3000",
     "https://127.0.0.1:3000",
-    
+    "https://eduardocdt.onrender.com",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
