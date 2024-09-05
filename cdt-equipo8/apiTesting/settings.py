@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+from os import getenv
+from dotenv import load_dotenv 
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -114,17 +115,17 @@ WSGI_APPLICATION = 'apiTesting.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'holabien',
-        'USER': 'hola',
-        'PASSWORD': 'hola12',
-        'HOST': 'localhost',  # O la dirección IP de tu servidor de base de datos
-        'PORT': '5432',  # El puerto por defecto de PostgreSQL
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'postgres',
+    'USER': 'postgres.ctmijzeodqxsfrafemwx',
+    'PASSWORD': 'holabien1234@',
+    'HOST': 'aws-0-us-east-2.pooler.supabase.com',
+    'PORT': '6543',
+
+  }
 }
-
-
+#holabien1234@
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
